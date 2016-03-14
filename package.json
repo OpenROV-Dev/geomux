@@ -1,0 +1,31 @@
+{
+  "name": "geomux",
+  "version": "0.0.4-dev",
+  "description": "For streaming uvc camera video feed to node.js",
+  "main": "index.js",
+  "scripts": {
+    "install": "./node_modules/.bin/node-pre-gyp install --fallback-to-build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Charles Cross",
+  "license": "ISC",
+  "gypfile": true,
+  "dependencies": {
+    "cppunitlite": "^1.0.0",
+    "nan": "^2.1.0",
+    "node-gyp": "~3.0.3",
+    "node-pre-gyp": "0.5.x",
+    "zmq": "^2.14.0"
+  },
+  "bundledDependencies": [
+    "node-pre-gyp"
+  ],
+  "devDependencies": {
+    "aws-sdk": "~2.0.0-rc.15"
+  },
+  "binary": {
+    "module_name": "geomux",
+    "module_path": "./lib/binding/",
+    "host": "https://openrov-software-nightlies.s3-us-west-2.amazonaws.com/geomux"
+  }
+}
